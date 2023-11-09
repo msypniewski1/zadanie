@@ -33,10 +33,18 @@
 		<input type="button" value="*" onclick="addToDisplay('*')">
 		</div>
 	
-	<script>
+	<script>		
 	function addToDisplay(value)
 	{
-		document.getElementById('display').value += value;
+		 var display = document.getElementById('display');
+       		 var lastChar = display.value.slice(-1);
+ 
+        if ('+-*/'.includes(value) && '+-*/'.includes(lastChar)) {
+		
+        } else 
+	{
+            display.value += value;
+	}	
 	}
 	function czyszczenie()
 	{
